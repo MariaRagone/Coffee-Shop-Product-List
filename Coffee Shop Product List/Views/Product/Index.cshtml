@@ -1,0 +1,19 @@
+﻿@model List<ProductTable>
+
+@{
+    <h1>Our top selling products.</h1>
+    foreach (ProductTable p in Model)
+    {   //everything related to one post is going to end up in this div
+                <a class="nav-link text-dark p-0" asp-action="ProductDetails" asp-route-id="@p.Id">
+
+        <div class="card">
+            <h4>@p.ProductName</h4>
+            <p>@p.ProductDescription</p>
+            <p>$@p.ProductPrice</p>
+            <p>Category: @p.ProductCategory</p>
+
+       </div>
+       </a>
+
+    }
+}

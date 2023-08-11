@@ -1,0 +1,10 @@
+﻿@model ProductTable
+<h3>@Model.ProductName</h3>
+<ul>
+    @{
+        foreach (DetailsTable d in ViewBag.DetailsTables)
+        {
+            <li>This item has @d.Cals calories</li>
+        }
+    }
+    </ul>

@@ -1,0 +1,9 @@
+﻿@model ProductTable
+<h3>@Model.ProductName</h3>
+<p>@Model.ProductCategory</p>
+    @{
+        foreach (DetailsTable d in ViewBag.DetailsTables)
+        {
+            <p>This item has @d.Cals calories</p>
+        }
+    }
